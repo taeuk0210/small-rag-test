@@ -1,0 +1,26 @@
+version: "3.9"
+services:
+  vllm-api:
+    image: vllm-cpu-env
+    container_name: vllm-cpu-env-container
+    ports:
+      - "${VLLM_PORT}:${VLLM_PORT}"
+    command:
+      - --host
+      - 0.0.0.0
+      - --port
+      - "${VLLM_PORT}"
+      - --model
+      - "${MODEL_NAME}"
+      # - --gpu-memory-utilization
+      # - "${GPU_MEMORY_UTIL}"
+      - --max-model-len
+      - "${MAX_MODEL_LEN}"
+      - --max-num-seqs
+      - "${MAX_NUM_SEQS}"
+      - --dtype
+      - "${DTYPE}"
+      # - --kv-cache-dtype
+      # - "${KV_CACHE_DTYPE}"
+    environment:
+      VLLM_CPU_KVCACHE_SPACE: ${VLLM_KV_SPACE}
