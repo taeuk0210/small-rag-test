@@ -1,3 +1,5 @@
+import os
+
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
@@ -9,9 +11,9 @@ class Config(BaseSettings):
     QUANTIZATION: str = ""
     DTYPE: str
     KV_CACHE_DTYPE: str
-    VLLM_BASE_URL: str
-    VLLM_TIME_OUT: float
     VLLM_API_KEY: str
+    VLLM_TIME_OUT: float
+    VLLM_BASE_URL: str
     GOOGLE_API_KEY: str
 
     model_config = SettingsConfigDict(
@@ -20,3 +22,5 @@ class Config(BaseSettings):
 
 
 config = Config()
+
+os.environ["GOOGLE_API_KEY"] = config.GOOGLE_API_KEY
