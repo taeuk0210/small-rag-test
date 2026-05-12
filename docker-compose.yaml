@@ -2,6 +2,7 @@ version: "3.9"
 services:
   vllm-cpu-service:
     image: vllm-cpu-env
+    profiles: ["cpu"]
     container_name: vllm-cpu-container
     ports:
       - "${VLLM_PORT}:${VLLM_PORT}"
@@ -21,30 +22,31 @@ services:
     environment:
       VLLM_CPU_KVCACHE_SPACE: ${VLLM_KV_SPACE}
 
-  # vllm-gpu-service:
-  #   image: vllm/vllm-openai:latest
-  #   container_name: vllm-gpu-container
-  #   ports:
-  #     - "${VLLM_PORT}:${VLLM_PORT}"
-  #   command:
-  #     - --host
-  #     - 0.0.0.0
-  #     - --port
-  #     - "${VLLM_PORT}"
-  #     - --model
-  #     - "${MODEL_NAME}"
-  #     - --max-model-len
-  #     - "${MAX_MODEL_LEN}"
-  #     - --max-num-seqs
-  #     - "${MAX_NUM_SEQS}"
-  #     - --kv-cache-dtype
-  #     - "${KV_CACHE_DTYPE}"
-  #     - --quantization
-  #     - "${QUANTIZATION}"
-  #   deploy:
-  #     resources:
-  #       reservations:
-  #         devices:
-  #           - driver: nvidia
-  #             count: all
-  #             capabilities: [gpu]
+  vllm-gpu-service:
+    image: vllm/vllm-openai:latest
+    profiles: ["gpu"]
+    container_name: vllm-gpu-container
+    ports:
+      - "${VLLM_PORT}:${VLLM_PORT}"
+    command:
+      - --host
+      - 0.0.0.0
+      - --port
+      - "${VLLM_PORT}"
+      - --model
+      - "${MODEL_NAME}"
+      - --max-model-len
+      - "${MAX_MODEL_LEN}"
+      - --max-num-seqs
+      - "${MAX_NUM_SEQS}"
+      - --kv-cache-dtype
+      - "${KV_CACHE_DTYPE}"
+      - --quantization
+      - "${QUANTIZATION}"
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]

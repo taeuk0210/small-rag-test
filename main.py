@@ -21,9 +21,6 @@ async def main():
     llm = llm_factory("gemini-2.5-flash", provider="google", client=client)
     embeddings = GoogleEmbeddings(client=client, model="gemini-embedding-001")
 
-    evaluator_llm = llm
-    evaluator_embeddings = embeddings
-
     with open("sample.json", "r", encoding="utf-8") as f:
         sample = json.load(f)
     samples = [
@@ -36,10 +33,10 @@ async def main():
     ]
     dataset = EvaluationDataset(samples=samples)
     metrics = [
-        _ContextPrecision(llm=evaluator_llm),
-        _ContextRecall(llm=evaluator_llm),
-        _Faithfulness(llm=evaluator_llm),
-        _AnswerCorrectness(llm=evaluator_llm, embeddings=evaluator_embeddings),
+        _ContextPrecision(llm=llm),
+        _ContextRecall(llm=llm),
+        _Faithfulness(llm=llm),
+        _AnswerCorrectness(llm=llm, embeddings=embeddings),
     ]
 
     results = await aevaluate(
