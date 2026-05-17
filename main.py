@@ -1,8 +1,7 @@
-import json
 import asyncio
 
 from google import genai
-from ragas import aevaluate, EvaluationDataset
+from ragas import aevaluate
 from ragas.llms import llm_factory
 from ragas.embeddings import GoogleEmbeddings
 from ragas.metrics import (
@@ -11,9 +10,9 @@ from ragas.metrics import (
     _ContextRecall,
     _Faithfulness,
 )
-from ragas.dataset_schema import SingleTurnSample
 
-from config import config
+from eval.config import config
+from eval.dataset import load_dataset
 
 
 async def main():
@@ -21,17 +20,7 @@ async def main():
     llm = llm_factory("gemini-2.5-flash", provider="google", client=client)
     embeddings = GoogleEmbeddings(client=client, model="gemini-embedding-001")
 
-    with open("sample.json", "r", encoding="utf-8") as f:
-        sample = json.load(f)
-    samples = [
-        SingleTurnSample(
-            user_input=sample["user_input"],
-            response=sample["response"],
-            retrieved_contexts=sample["retrieved_contexts"],
-            reference=sample["reference"],
-        )
-    ]
-    dataset = EvaluationDataset(samples=samples)
+    dataset = load_dataset()
     metrics = [
         _ContextPrecision(llm=llm),
         _ContextRecall(llm=llm),

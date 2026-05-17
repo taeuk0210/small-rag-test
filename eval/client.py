@@ -2,8 +2,8 @@ import traceback
 
 import openai
 
-from config import config
-from schemas import Prompt
+from eval.config import config
+from eval.schemas import Prompt
 
 
 class VLLMClient:
