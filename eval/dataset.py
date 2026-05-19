@@ -1,22 +1,59 @@
+import os
 import json
+from typing import Dict, Any
 
 from ragas import EvaluationDataset
 from ragas.dataset_schema import SingleTurnSample, MultiTurnSample
 from ragas.messages import HumanMessage, AIMessage
 
+from eval.schemas import LLMResult
 
-def load_dataset() -> EvaluationDataset:
-    with open("samples/001.json", "r", encoding="utf-8") as f:
-        sample = json.load(f)
-        
-    samples = [
-        SingleTurnSample(
-            user_input=sample["user_input"],
-            response=sample["response"],
-            retrieved_contexts=sample["retrieved_contexts"],
-            reference=sample["reference"],
-        )
-    ]
+
+def load_json(datapath: str) -> Dict[str, Any]:
+    with open(datapath, "r", encoding="utf-8") as f:
+        data = json.load(f)
+    return data
+
+
+def save_json(datapath: str, data: Dict[str, Any]) -> None:
+    dirname = os.path.dirname(datapath)
+    os.makedirs(dirname, exist_ok=True)
+    with open(datapath, "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=4)
+    return
+
+
+def load_dataset(datapath: str) -> EvaluationDataset:
+    results = load_json(datapath=datapath)
+    results = [LLMResult.model_validate(r) for r in results]
+
+    samples = []
+    for result in results:
+        if len(result.prompt.history) < 1:
+            sample = SingleTurnSample(
+                user_input=result.prompt.user_input,
+                retrieved_contexts=result.prompt.retrieved_contexts,
+                response=result.completion,
+                reference=result.prompt.reference,
+            )
+        else:
+            user_input = []
+            for turn in result.prompt.history:
+                if turn.role == "user":
+                    user_input.append(HumanMessage(content=turn.content))
+
+                elif turn.role == "assistant":
+                    user_input.append(AIMessage(content=turn.content))
+
+            user_input.append(HumanMessage(content=result.prompt.input_prompt))
+
+            sample = MultiTurnSample(
+                user_input=user_input,
+                reference=result.prompt.reference,
+            )
+
+        samples.append(sample)
+
     dataset = EvaluationDataset(samples=samples)
 
     return dataset

@@ -1,7 +1,7 @@
 version: "3.9"
 services:
   vllm-cpu-service:
-    image: vllm-cpu-env
+    image: taeuk0210/vllm-cpu-env:1.0
     profiles: ["cpu"]
     container_name: vllm-cpu-container
     ports:
@@ -9,14 +9,22 @@ services:
     command:
       - --host
       - 0.0.0.0
+
       - --port
       - "${VLLM_PORT}"
+
       - --model
       - "${MODEL_NAME}"
+
+      - --gpu-memory-utilization
+      - "${GPU_MEMORY_UTIL}"
+
       - --max-model-len
       - "${MAX_MODEL_LEN}"
+
       - --max-num-seqs
       - "${MAX_NUM_SEQS}"
+
       - --dtype
       - "${DTYPE}"
     environment:
@@ -31,16 +39,25 @@ services:
     command:
       - --host
       - 0.0.0.0
+
       - --port
       - "${VLLM_PORT}"
+
       - --model
       - "${MODEL_NAME}"
+
+      - --gpu-memory-utilization
+      - "${GPU_MEMORY_UTIL}"
+
       - --max-model-len
       - "${MAX_MODEL_LEN}"
+
       - --max-num-seqs
       - "${MAX_NUM_SEQS}"
+
       - --kv-cache-dtype
       - "${KV_CACHE_DTYPE}"
+      
       - --quantization
       - "${QUANTIZATION}"
     deploy:

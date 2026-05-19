@@ -4,19 +4,21 @@ Performance test of rag with small llm by ragas framework.
 ### .env example
 
 ```bash
-MODEL_NAME=google/gemma-4-E2B-it
+MODEL_NAME=Qwen/Qwen3.5-0.8B
 
-GPU_MEMORY_UTIL=0.8
+LLM_OUTPUT = outputs/Qwen3.5-0.8B
 
-MAX_MODEL_LEN=12298
+GPU_MEMORY_UTIL=0.7
 
-MAX_NUM_SEQS=10
+MAX_MODEL_LEN=2048
 
-QUANTIZATION=awq
+MAX_NUM_SEQS=1
+
+# QUANTIZATION=awq
 
 DTYPE=auto
 
-KV_CACHE_DTYPE=fp8
+# KV_CACHE_DTYPE=fp8
 
 VLLM_PORT=8000 
 
@@ -24,11 +26,15 @@ VLLM_API_KEY=EMPTY
 
 VLLM_TIME_OUT=300
 
+VLLM_KV_SPACE=2
+
 VLLM_BASE_URL=http://localhost:${VLLM_PORT}/v1
 
-GOOGLE_API_KEY=<MY-GOOGLE-API-KEY>
+GOOGLE_API_KEY=<GOOGLE_API_KEY>
 
 COMPOSE_PROFILES=cpu
+
+BASE_INPUT = inputs/base.json
 ```
 
 
