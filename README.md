@@ -35,6 +35,20 @@ GOOGLE_API_KEY=<GOOGLE_API_KEY>
 COMPOSE_PROFILES=cpu
 ```
 
+### RAGAS Metrics
+
+**LLM-based**  
+- Answer Correctness
+- Answer Relevancy
+- Faithfulness
+- Context Entity Recall
+- Answer Semantic Similarity
+
+**non-LLM based**
+- Keyword Exact Match
+- ROUGE-L
+- Format Succees Rate
+- Verbosity & Repetition
 
 ### Docker CPU Image
 

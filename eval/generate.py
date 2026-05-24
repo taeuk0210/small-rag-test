@@ -50,7 +50,7 @@ def main():
     for d in data:
         d["system_prompt"] = SYSTEM_PROMPT
         d["input_prompt"] = INPUT_PROMPT.format(
-            contexts="\n".join(f" - {c["content"]}" for c in d["retrieved_contexts"]),
+            contexts="\n".join(f" - {c['content']}" for c in d["retrieved_contexts"]),
             user_input=d["user_input"],
         )
         prompts.append(Prompt.model_validate(d))

@@ -1,5 +1,5 @@
 {
-    "MODEL_NAME": "Qwen/Qwen2.5-0.5B-Instruct",
+    "MODEL_NAME": "google/gemma-3-1b-it",
     "BASE_INPUT": "inputs/0524001.json",
     "GPU_MEMORY_UTIL": 0.8,
     "MAX_MODEL_LEN": 4096,

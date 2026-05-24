@@ -5,10 +5,12 @@ from ragas import aevaluate
 from ragas.llms import llm_factory
 from ragas.embeddings import GoogleEmbeddings
 from ragas.metrics import (
-    _AnswerCorrectness,
-    _ContextPrecision,
-    _ContextRecall,
+    _RougeScore,
     _Faithfulness,
+    _AnswerRelevancy,
+    _AnswerSimilarity,
+    _AnswerCorrectness,
+    _ContextEntityRecall,
 )
 
 from eval.config import config
@@ -22,10 +24,12 @@ async def main():
 
     dataset = load_dataset()
     metrics = [
-        _ContextPrecision(llm=llm),
-        _ContextRecall(llm=llm),
+        _RougeScore(),
         _Faithfulness(llm=llm),
+        _AnswerRelevancy(llm=llm, embeddings=embeddings),
+        _AnswerSimilarity(embeddings=embeddings),
         _AnswerCorrectness(llm=llm, embeddings=embeddings),
+        _ContextEntityRecall(llm=llm),
     ]
 
     results = await aevaluate(
