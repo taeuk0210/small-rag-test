@@ -1,0 +1,18 @@
+{
+    "MODEL_NAME": "Qwen/Qwen2.5-0.5B-Instruct",
+    "BASE_INPUT": "inputs/base.json",
+    "GPU_MEMORY_UTIL": 0.8,
+    "MAX_MODEL_LEN": 4096,
+    "MAX_NUM_SEQS": 1,
+    "QUANTIZATION": "",
+    "DTYPE": "auto",
+    "KV_CACHE_DTYPE": "fp8",
+    "VLLM_PORT": 8000,
+    "VLLM_API_KEY": "EMPTY",
+    "VLLM_TIME_OUT": 300,
+    "VLLM_KV_SPACE": 2,
+    "VLLM_BASE_URL": "https://lucid-calcium-mothproof.ngrok-free.dev/v1",
+    "GOOGLE_API_KEY": "AIzaSyAX8c5LnBG9wMJ8Dak6zVSoWBQK_h7fils",
+    "NGROK_TOKEN": "3E9rYsSECceswkFpWebyNqtRpSe_2C9WHjnsb6TMX4ENCtSF3",
+    "COMPOSE_PROFILES": "cpu"
+}

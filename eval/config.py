@@ -16,6 +16,8 @@ class Config(BaseSettings):
     VLLM_KV_SPACE: int
     VLLM_BASE_URL: str
     GOOGLE_API_KEY: str
+    NGROK_TOKEN: str
+    HF_TOKEN: str
     COMPOSE_PROFILES: str
 
     model_config = SettingsConfigDict(

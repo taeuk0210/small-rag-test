@@ -55,8 +55,6 @@ def main():
         )
         prompts.append(Prompt.model_validate(d))
 
-    prompts = prompts[:1]
-    
     succeeds = 0
     results: List[LLMResult] = []
     with concurrent.futures.ThreadPoolExecutor(
