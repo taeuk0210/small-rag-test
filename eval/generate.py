@@ -2,7 +2,7 @@ import os
 import traceback
 import concurrent.futures
 
-from time import perf_counter
+import time
 from tqdm import tqdm
 from typing import List
 
@@ -15,9 +15,9 @@ from eval.schemas import Prompt, LLMResult, Token
 
 def _llm_response(client: VLLMClient, prompt: Prompt, results: List[LLMResult]) -> bool:
     try:
-        t0 = perf_counter()
+        t0 = time.perf_counter()
         response = client.send(prompt=prompt)
-        t1 = perf_counter()
+        t1 = time.perf_counter()
 
         completion = response.choices[0].message.content
         token = response.usage.to_dict()
@@ -55,6 +55,8 @@ def main():
         )
         prompts.append(Prompt.model_validate(d))
 
+    prompts = prompts[:1]
+    
     succeeds = 0
     results: List[LLMResult] = []
     with concurrent.futures.ThreadPoolExecutor(
@@ -70,12 +72,13 @@ def main():
             if future.result():
                 succeeds += 1
 
+    output_dir = os.path.join("outputs", config.MODEL_NAME)
     save_json(
-        datapath=os.path.join(config.LLM_OUTPUT, "config.json"),
+        datapath=os.path.join(output_dir, "config.json"),
         data=config.model_dump(),
     )
     save_json(
-        datapath=os.path.join(config.LLM_OUTPUT, "results.json"),
+        datapath=os.path.join(output_dir, "results.json"),
         data=[result.model_dump() for result in results],
     )
     return

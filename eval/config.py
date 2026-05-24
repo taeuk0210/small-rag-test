@@ -4,7 +4,6 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 class Config(BaseSettings):
     MODEL_NAME: str
     BASE_INPUT: str
-    LLM_OUTPUT: str
     GPU_MEMORY_UTIL: float
     MAX_MODEL_LEN: int
     MAX_NUM_SEQS: int
