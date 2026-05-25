@@ -24,3 +24,24 @@ v:
 
 g:
 	python3 -m eval.generate
+
+e:
+	@nohup sh -c "\
+		python3 -m eval.evaluation --datapath outputs/google/gemma-3-1b-it/results.json && \
+		python3 -m eval.evaluation --datapath outputs/google/gemma-4-E2B-it/results.json && \
+		python3 -m eval.evaluation --datapath outputs/meta-llama/Llama-3.2-3B-Instruct/results.json && \
+		python3 -m eval.evaluation --datapath outputs/mistralai/Ministral-3-3B-Instruct-2512/results.json && \
+		python3 -m eval.evaluation --datapath outputs/Qwen/Qwen2.5-0.5B-Instruct/results.json && \
+		python3 -m eval.evaluation --datapath outputs/Qwen/Qwen3.5-2B/results.json \
+	" > eval.log 2>&1 &
+	
+
+e2:
+	@nohup sh -c "\
+		python3 -m eval.eval --datapath outputs/google/gemma-3-1b-it/results.json && \
+		python3 -m eval.eval --datapath outputs/google/gemma-4-E2B-it/results.json && \
+		python3 -m eval.eval --datapath outputs/meta-llama/Llama-3.2-3B-Instruct/results.json && \
+		python3 -m eval.eval --datapath outputs/mistralai/Ministral-3-3B-Instruct-2512/results.json && \
+		python3 -m eval.eval --datapath outputs/Qwen/Qwen2.5-0.5B-Instruct/results.json && \
+		python3 -m eval.eval --datapath outputs/Qwen/Qwen3.5-2B/results.json \
+	" > eval_wo_llm.log 2>&1 &

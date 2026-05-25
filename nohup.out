@@ -1,0 +1,40 @@
+/home/taeuk0210/small-rag-test/eval/evaluation.py:33: DeprecationWarning: aevaluate() is deprecated and will be removed in a future version. Use the @experiment decorator instead. See https://docs.ragas.io/en/latest/concepts/experiment/ for more information.
+  results = await aevaluate(
+Evaluating:   0%|          | 0/10 [00:00<?, ?it/s]Evaluating:  10%|█         | 1/10 [03:42<33:24, 222.75s/it]ERROR:ragas.executor:Exception raised in Job[1]: TimeoutError()
+ERROR:ragas.executor:Exception raised in Job[3]: TimeoutError()
+ERROR:ragas.executor:Exception raised in Job[5]: TimeoutError()
+ERROR:ragas.executor:Exception raised in Job[7]: TimeoutError()
+ERROR:ragas.executor:Exception raised in Job[9]: TimeoutError()
+Evaluating: 100%|██████████| 10/10 [03:42<00:00, 22.28s/it]
+/home/taeuk0210/small-rag-test/eval/evaluation.py:32: DeprecationWarning: aevaluate() is deprecated and will be removed in a future version. Use the @experiment decorator instead. See https://docs.ragas.io/en/latest/concepts/experiment/ for more information.
+  results = await aevaluate(
+Evaluating:   0%|          | 0/5 [00:00<?, ?it/s]Exception raised in Job[0]: TimeoutError()
+Exception raised in Job[1]: TimeoutError()
+Exception raised in Job[2]: TimeoutError()
+Exception raised in Job[3]: TimeoutError()
+Exception raised in Job[4]: TimeoutError()
+Evaluating:  20%|██        | 1/5 [03:42<14:50, 222.73s/it]Evaluating: 100%|██████████| 5/5 [03:42<00:00, 44.55s/it] 
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/taeuk0210/small-rag-test/eval/evaluation.py", line 53, in <module>
+    asyncio.run(main(args.datapath))
+  File "/usr/lib/python3.11/asyncio/runners.py", line 190, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/asyncio/base_events.py", line 653, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/home/taeuk0210/small-rag-test/eval/evaluation.py", line 32, in main
+    run_config = RunConfig(
+                 ^^^^^^^^^^
+TypeError: RunConfig.__init__() got an unexpected keyword argument 'timedout'
+/home/taeuk0210/small-rag-test/eval/evaluation.py:38: DeprecationWarning: aevaluate() is deprecated and will be removed in a future version. Use the @experiment decorator instead. See https://docs.ragas.io/en/latest/concepts/experiment/ for more information.
+  results = await aevaluate(
+Evaluating:   0%|          | 0/5 [00:00<?, ?it/s]Evaluating:  20%|██        | 1/5 [02:22<09:31, 142.81s/it]Exception raised in Job[1]: TimeoutError()
+Evaluating:  40%|████      | 2/5 [03:01<04:05, 81.67s/it] /home/taeuk0210/small-rag-test/eval/evaluation.py:38: DeprecationWarning: aevaluate() is deprecated and will be removed in a future version. Use the @experiment decorator instead. See https://docs.ragas.io/en/latest/concepts/experiment/ for more information.
+  results = await aevaluate(
+Evaluating:   0%|          | 0/1 [00:00<?, ?it/s]Evaluating: 100%|██████████| 1/1 [00:36<00:00, 36.39s/it]Evaluating: 100%|██████████| 1/1 [00:36<00:00, 36.39s/it]

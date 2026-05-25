@@ -3,8 +3,7 @@ import json
 from typing import Dict, Any
 
 from ragas import EvaluationDataset
-from ragas.dataset_schema import SingleTurnSample, MultiTurnSample
-from ragas.messages import HumanMessage, AIMessage
+from ragas.dataset_schema import SingleTurnSample
 
 from eval.schemas import LLMResult
 
@@ -27,32 +26,14 @@ def load_dataset(datapath: str) -> EvaluationDataset:
     results = load_json(datapath=datapath)
     results = [LLMResult.model_validate(r) for r in results]
 
-    samples = []
-    for result in results:
-        if len(result.prompt.history) < 1:
-            sample = SingleTurnSample(
-                user_input=result.prompt.user_input,
-                retrieved_contexts=result.prompt.retrieved_contexts,
-                response=result.completion,
-                reference=result.prompt.reference,
-            )
-        else:
-            user_input = []
-            for turn in result.prompt.history:
-                if turn.role == "user":
-                    user_input.append(HumanMessage(content=turn.content))
-
-                elif turn.role == "assistant":
-                    user_input.append(AIMessage(content=turn.content))
-
-            user_input.append(HumanMessage(content=result.prompt.input_prompt))
-
-            sample = MultiTurnSample(
-                user_input=user_input,
-                reference=result.prompt.reference,
-            )
-
-        samples.append(sample)
+    samples = [
+        SingleTurnSample(
+            user_input=result.prompt.user_input,
+            retrieved_contexts=[c.content for c in result.prompt.retrieved_contexts],
+            response=result.completion,
+            reference=result.prompt.reference,
+        ) for result in results
+    ]
 
     dataset = EvaluationDataset(samples=samples)
 
