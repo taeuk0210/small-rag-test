@@ -1,0 +1,16 @@
+{
+    "MODEL_NAME": "meta-llama/Llama-3.1-8B-Instruct",
+    "BASE_INPUT": "inputs/0524001.json",
+    "GPU_MEMORY_UTIL": 0.8,
+    "MAX_MODEL_LEN": 4096,
+    "MAX_NUM_SEQS": 1,
+    "QUANTIZATION": "",
+    "DTYPE": "auto",
+    "KV_CACHE_DTYPE": "auto",
+    "VLLM_PORT": 8000,
+    "VLLM_API_KEY": "EMPTY",
+    "VLLM_TIME_OUT": 300,
+    "VLLM_KV_SPACE": 2,
+    "VLLM_BASE_URL": "http://localhost:8000 /v1",
+    "COMPOSE_PROFILES": "cpu"
+}

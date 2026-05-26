@@ -45,3 +45,6 @@ e2:
 		python3 -m eval.eval --datapath outputs/Qwen/Qwen2.5-0.5B-Instruct/results.json && \
 		python3 -m eval.eval --datapath outputs/Qwen/Qwen3.5-2B/results.json \
 	" > eval_wo_llm.log 2>&1 &
+
+e3:
+	@nohup python3 -m eval.evaluation --datapath outputs/meta-llama/Llama-3.1-8B-Instruct/results.json > eval_llama.log 2>&1 &

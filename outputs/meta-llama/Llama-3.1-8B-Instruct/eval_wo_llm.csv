@@ -1,0 +1,201 @@
+topic,variant,chunks,turns,chrf,rouge
+macOS VPN 및 보안 에이전트 충돌,Baseline,3,2,0.3281503403671718,0.3225806451612903
+macOS VPN 및 보안 에이전트 충돌,Context_Summarized,1,2,0.28949443151673376,0.303030303030303
+macOS VPN 및 보안 에이전트 충돌,Max_Chunks,6,2,0.30146635269502925,0.33333333333333337
+macOS VPN 및 보안 에이전트 충돌,High_Noise,4,2,0.3077130465299875,0.3333333333333333
+macOS VPN 및 보안 에이전트 충돌,Ranking_Swapped,4,2,0.33291325218830187,0.3125
+macOS VPN 및 보안 에이전트 충돌,Short_History,2,2,0.35801205189316404,0.39999999999999997
+macOS VPN 및 보안 에이전트 충돌,Long_History,2,6,0.3199968489283495,0.3809523809523809
+macOS VPN 및 보안 에이전트 충돌,Forced_JSON_Format,2,2,0.41612519651772073,0.6206896551724138
+macOS VPN 및 보안 에이전트 충돌,Hallucination_Defense,3,2,0.050154238693960254,0.0
+macOS VPN 및 보안 에이전트 충돌,Mixed_Stress_Test,6,6,0.2521393727373603,0.22222222222222224
+사내 Wi-Fi 인증서 만료 및 802.1x 에러,Baseline,3,2,0.28445589120507025,0.25
+사내 Wi-Fi 인증서 만료 및 802.1x 에러,Context_Summarized,1,2,0.3690056812795608,0.3529411764705882
+사내 Wi-Fi 인증서 만료 및 802.1x 에러,Max_Chunks,6,2,0.4265618502682823,0.4827586206896552
+사내 Wi-Fi 인증서 만료 및 802.1x 에러,High_Noise,4,2,0.4552290021127047,0.4827586206896552
+사내 Wi-Fi 인증서 만료 및 802.1x 에러,Ranking_Swapped,4,2,0.4584903171551267,0.4827586206896552
+사내 Wi-Fi 인증서 만료 및 802.1x 에러,Short_History,2,2,0.42416196538034123,0.4827586206896552
+사내 Wi-Fi 인증서 만료 및 802.1x 에러,Long_History,2,6,0.4765977343739883,0.6363636363636364
+사내 Wi-Fi 인증서 만료 및 802.1x 에러,Forced_JSON_Format,2,2,0.3704427638753172,0.5
+사내 Wi-Fi 인증서 만료 및 802.1x 에러,Hallucination_Defense,3,2,0.11936855608806875,0.0
+사내 Wi-Fi 인증서 만료 및 802.1x 에러,Mixed_Stress_Test,6,6,0.3308782017477231,0.2222222222222222
+Active Directory 계정 잠김 해결,Baseline,3,2,0.18173561923304235,0.21052631578947367
+Active Directory 계정 잠김 해결,Context_Summarized,1,2,0.18710308058452962,0.25
+Active Directory 계정 잠김 해결,Max_Chunks,6,2,0.40427149916802385,0.4444444444444444
+Active Directory 계정 잠김 해결,High_Noise,4,2,0.2639552862759846,0.2
+Active Directory 계정 잠김 해결,Ranking_Swapped,4,2,0.4145948466108539,0.4705882352941177
+Active Directory 계정 잠김 해결,Short_History,2,2,0.2367498445871369,0.08333333333333333
+Active Directory 계정 잠김 해결,Long_History,2,6,0.3488220859087764,0.4705882352941177
+Active Directory 계정 잠김 해결,Forced_JSON_Format,2,2,0.4562964487304752,0.5925925925925927
+Active Directory 계정 잠김 해결,Hallucination_Defense,3,2,0.08290392484910118,0.0
+Active Directory 계정 잠김 해결,Mixed_Stress_Test,6,6,0.15418994495120222,0.33333333333333337
+VS Code Pylance 확장 프로그램 오류,Baseline,3,2,0.2037701930732817,0.27272727272727276
+VS Code Pylance 확장 프로그램 오류,Context_Summarized,1,2,0.20352175475605067,0.21052631578947367
+VS Code Pylance 확장 프로그램 오류,Max_Chunks,6,2,0.3251751539198633,0.375
+VS Code Pylance 확장 프로그램 오류,High_Noise,4,2,0.28494713315446457,0.4
+VS Code Pylance 확장 프로그램 오류,Ranking_Swapped,4,2,0.1961584590197344,0.21428571428571427
+VS Code Pylance 확장 프로그램 오류,Short_History,2,2,0.23549050976002847,0.25
+VS Code Pylance 확장 프로그램 오류,Long_History,2,6,0.18621829788413063,0.25
+VS Code Pylance 확장 프로그램 오류,Forced_JSON_Format,2,2,0.48906656464969567,0.7017543859649122
+VS Code Pylance 확장 프로그램 오류,Hallucination_Defense,3,2,0.09059731616197889,0.0
+VS Code Pylance 확장 프로그램 오류,Mixed_Stress_Test,6,6,0.20654562302464322,0.25641025641025644
+Zoom/Teams 마이크 권한 거부,Baseline,3,2,0.23826779587210611,0.2352941176470588
+Zoom/Teams 마이크 권한 거부,Context_Summarized,1,2,0.2813832206680491,0.32258064516129037
+Zoom/Teams 마이크 권한 거부,Max_Chunks,6,2,0.33214863264395056,0.4166666666666667
+Zoom/Teams 마이크 권한 거부,High_Noise,4,2,0.36852674459032536,0.45454545454545453
+Zoom/Teams 마이크 권한 거부,Ranking_Swapped,4,2,0.3730026672183328,0.4166666666666667
+Zoom/Teams 마이크 권한 거부,Short_History,2,2,0.2715506169692128,0.2857142857142857
+Zoom/Teams 마이크 권한 거부,Long_History,2,6,0.33410308052512305,0.3571428571428571
+Zoom/Teams 마이크 권한 거부,Forced_JSON_Format,2,2,0.4654368538713845,0.7333333333333333
+Zoom/Teams 마이크 권한 거부,Hallucination_Defense,3,2,0.0700571072428121,0.0
+Zoom/Teams 마이크 권한 거부,Mixed_Stress_Test,6,6,0.2668259949290816,0.3125
+Windows 11 BitLocker 복구 키 요구,Baseline,3,2,0.2427767418086486,0.0909090909090909
+Windows 11 BitLocker 복구 키 요구,Context_Summarized,1,2,0.23200019339987488,0.10526315789473685
+Windows 11 BitLocker 복구 키 요구,Max_Chunks,6,2,0.33070009171153564,0.25
+Windows 11 BitLocker 복구 키 요구,High_Noise,4,2,0.35947339787096927,0.19354838709677416
+Windows 11 BitLocker 복구 키 요구,Ranking_Swapped,4,2,0.2802870010120822,0.17142857142857143
+Windows 11 BitLocker 복구 키 요구,Short_History,2,2,0.32022997158290545,0.22222222222222218
+Windows 11 BitLocker 복구 키 요구,Long_History,2,6,0.24819636579128107,0.10526315789473685
+Windows 11 BitLocker 복구 키 요구,Forced_JSON_Format,2,2,0.5150374070154718,0.6857142857142857
+Windows 11 BitLocker 복구 키 요구,Hallucination_Defense,3,2,0.08132067884646547,0.0
+Windows 11 BitLocker 복구 키 요구,Mixed_Stress_Test,6,6,0.266111015361039,0.16666666666666666
+GitHub Enterprise SSH 키 등록 오류,Baseline,3,2,0.4282395783375035,0.32
+GitHub Enterprise SSH 키 등록 오류,Context_Summarized,1,2,0.38922296451784383,0.3076923076923077
+GitHub Enterprise SSH 키 등록 오류,Max_Chunks,6,2,0.3171264397284643,0.21739130434782608
+GitHub Enterprise SSH 키 등록 오류,High_Noise,4,2,0.45550069270006766,0.25454545454545446
+GitHub Enterprise SSH 키 등록 오류,Ranking_Swapped,4,2,0.28437200021010534,0.22222222222222224
+GitHub Enterprise SSH 키 등록 오류,Short_History,2,2,0.4019999336479825,0.3018867924528302
+GitHub Enterprise SSH 키 등록 오류,Long_History,2,6,0.3274049581535741,0.2777777777777778
+GitHub Enterprise SSH 키 등록 오류,Forced_JSON_Format,2,2,0.5040885512794984,0.631578947368421
+GitHub Enterprise SSH 키 등록 오류,Hallucination_Defense,3,2,0.07454463520448094,0.0
+GitHub Enterprise SSH 키 등록 오류,Mixed_Stress_Test,6,6,0.3709389487178236,0.2711864406779661
+Docker Desktop 가상 디스크 용량 초과,Baseline,3,2,0.1995736838010359,0.12698412698412698
+Docker Desktop 가상 디스크 용량 초과,Context_Summarized,1,2,0.2922945259998336,0.2142857142857143
+Docker Desktop 가상 디스크 용량 초과,Max_Chunks,6,2,0.22892524912131243,0.13559322033898302
+Docker Desktop 가상 디스크 용량 초과,High_Noise,4,2,0.41293350813176216,0.391304347826087
+Docker Desktop 가상 디스크 용량 초과,Ranking_Swapped,4,2,0.2338997624793067,0.13559322033898302
+Docker Desktop 가상 디스크 용량 초과,Short_History,2,2,0.16201357597306149,0.09523809523809523
+Docker Desktop 가상 디스크 용량 초과,Long_History,2,6,0.24500446621924568,0.1818181818181818
+Docker Desktop 가상 디스크 용량 초과,Forced_JSON_Format,2,2,0.3178152709599043,0.5
+Docker Desktop 가상 디스크 용량 초과,Hallucination_Defense,3,2,0.07454463520448094,0.0
+Docker Desktop 가상 디스크 용량 초과,Mixed_Stress_Test,6,6,0.24792543727331978,0.2
+AWS CLI 로컬 크레덴셜 만료,Baseline,3,2,0.10856533451666411,0.08602150537634408
+AWS CLI 로컬 크레덴셜 만료,Context_Summarized,1,2,0.24170752516187696,0.1518987341772152
+AWS CLI 로컬 크레덴셜 만료,Max_Chunks,6,2,0.14728699087623376,0.11940298507462686
+AWS CLI 로컬 크레덴셜 만료,High_Noise,4,2,0.11758387195633858,0.1290322580645161
+AWS CLI 로컬 크레덴셜 만료,Ranking_Swapped,4,2,0.13028502455229055,0.13333333333333333
+AWS CLI 로컬 크레덴셜 만료,Short_History,2,2,0.12638548795354893,0.1176470588235294
+AWS CLI 로컬 크레덴셜 만료,Long_History,2,6,0.1176600453657371,0.08888888888888889
+AWS CLI 로컬 크레덴셜 만료,Forced_JSON_Format,2,2,0.46379655844022133,0.5333333333333333
+AWS CLI 로컬 크레덴셜 만료,Hallucination_Defense,3,2,0.1496847646224859,0.0
+AWS CLI 로컬 크레덴셜 만료,Mixed_Stress_Test,6,6,0.11476859935140198,0.07766990291262135
+사내 슬랙 채널 미동기화 및 유실,Baseline,3,2,0.08183055799031978,0.0
+사내 슬랙 채널 미동기화 및 유실,Context_Summarized,1,2,0.17630854982661714,0.0
+사내 슬랙 채널 미동기화 및 유실,Max_Chunks,6,2,0.2577818888417179,0.0
+사내 슬랙 채널 미동기화 및 유실,High_Noise,4,2,0.18721687338915272,0.0
+사내 슬랙 채널 미동기화 및 유실,Ranking_Swapped,4,2,0.17156735036409312,0.0
+사내 슬랙 채널 미동기화 및 유실,Short_History,2,2,0.11718177095665579,0.0
+사내 슬랙 채널 미동기화 및 유실,Long_History,2,6,0.19092339245496295,0.0
+사내 슬랙 채널 미동기화 및 유실,Forced_JSON_Format,2,2,0.36919328243788013,0.8
+사내 슬랙 채널 미동기화 및 유실,Hallucination_Defense,3,2,0.07710310970553236,0.0
+사내 슬랙 채널 미동기화 및 유실,Mixed_Stress_Test,6,6,0.015190281476587875,0.0
+프린터 스풀러 서비스 중지 에러,Baseline,3,2,0.22693128314969777,0.1621621621621622
+프린터 스풀러 서비스 중지 에러,Context_Summarized,1,2,0.2039765013657865,0.14634146341463414
+프린터 스풀러 서비스 중지 에러,Max_Chunks,6,2,0.2090526517277036,0.1621621621621622
+프린터 스풀러 서비스 중지 에러,High_Noise,4,2,0.21431832705281156,0.1621621621621622
+프린터 스풀러 서비스 중지 에러,Ranking_Swapped,4,2,0.21901273440673066,0.1621621621621622
+프린터 스풀러 서비스 중지 에러,Short_History,2,2,0.2096147081484512,0.13636363636363635
+프린터 스풀러 서비스 중지 에러,Long_History,2,6,0.1722898250692478,0.15789473684210528
+프린터 스풀러 서비스 중지 에러,Forced_JSON_Format,2,2,0.4797514272344578,0.6
+프린터 스풀러 서비스 중지 에러,Hallucination_Defense,3,2,0.05606346200557123,0.0
+프린터 스풀러 서비스 중지 에러,Mixed_Stress_Test,6,6,0.18878894905971288,0.15789473684210525
+크롬 브라우저 확장프로그램 차단 정책,Baseline,3,2,0.1772011535080936,0.0
+크롬 브라우저 확장프로그램 차단 정책,Context_Summarized,1,2,0.02479668090211518,0.0
+크롬 브라우저 확장프로그램 차단 정책,Max_Chunks,6,2,0.20188205663706654,0.0
+크롬 브라우저 확장프로그램 차단 정책,High_Noise,4,2,0.19593157192300223,0.0
+크롬 브라우저 확장프로그램 차단 정책,Ranking_Swapped,4,2,0.1665046497943096,0.0
+크롬 브라우저 확장프로그램 차단 정책,Short_History,2,2,0.12664188012071004,0.0
+크롬 브라우저 확장프로그램 차단 정책,Long_History,2,6,0.16509507853867908,0.0
+크롬 브라우저 확장프로그램 차단 정책,Forced_JSON_Format,2,2,0.505662763783175,0.6956521739130435
+크롬 브라우저 확장프로그램 차단 정책,Hallucination_Defense,3,2,0.0755705722285129,0.0
+크롬 브라우저 확장프로그램 차단 정책,Mixed_Stress_Test,6,6,0.018271573846440188,0.0
+사내 MDM 프로필 설치 실패,Baseline,3,2,0.18871880483932435,0.25
+사내 MDM 프로필 설치 실패,Context_Summarized,1,2,0.17253788049379046,0.26666666666666666
+사내 MDM 프로필 설치 실패,Max_Chunks,6,2,0.2556923361291402,0.18181818181818182
+사내 MDM 프로필 설치 실패,High_Noise,4,2,0.1811938232533114,0.25
+사내 MDM 프로필 설치 실패,Ranking_Swapped,4,2,0.2291255339269368,0.23529411764705882
+사내 MDM 프로필 설치 실패,Short_History,2,2,0.16045939097304157,0.28571428571428575
+사내 MDM 프로필 설치 실패,Long_History,2,6,0.2442309029676399,0.33333333333333337
+사내 MDM 프로필 설치 실패,Forced_JSON_Format,2,2,0.3754597164606951,0.5833333333333334
+사내 MDM 프로필 설치 실패,Hallucination_Defense,3,2,0.08132067884646547,0.0
+사내 MDM 프로필 설치 실패,Mixed_Stress_Test,6,6,0.15293025652107392,0.058823529411764705
+Node.js 사내 Nexus 사설 레지스트리 에러,Baseline,3,2,0.08413618869857684,0.07017543859649124
+Node.js 사내 Nexus 사설 레지스트리 에러,Context_Summarized,1,2,0.29688155610586753,0.23333333333333336
+Node.js 사내 Nexus 사설 레지스트리 에러,Max_Chunks,6,2,0.1946726063638658,0.2
+Node.js 사내 Nexus 사설 레지스트리 에러,High_Noise,4,2,0.22532019618345767,0.21052631578947364
+Node.js 사내 Nexus 사설 레지스트리 에러,Ranking_Swapped,4,2,0.218378055920258,0.21052631578947364
+Node.js 사내 Nexus 사설 레지스트리 에러,Short_History,2,2,0.33488906481914066,0.4444444444444444
+Node.js 사내 Nexus 사설 레지스트리 에러,Long_History,2,6,0.12365891167216107,0.17142857142857143
+Node.js 사내 Nexus 사설 레지스트리 에러,Forced_JSON_Format,2,2,0.4379962045288799,0.5333333333333333
+Node.js 사내 Nexus 사설 레지스트리 에러,Hallucination_Defense,3,2,0.07454463520448094,0.0
+Node.js 사내 Nexus 사설 레지스트리 에러,Mixed_Stress_Test,6,6,0.3107870933405551,0.34782608695652173
+Git Merge 충돌(Conflict) 발생 해결,Baseline,3,2,0.2977539682822443,0.2641509433962264
+Git Merge 충돌(Conflict) 발생 해결,Context_Summarized,1,2,0.31137635644213063,0.2545454545454546
+Git Merge 충돌(Conflict) 발생 해결,Max_Chunks,6,2,0.3495432649546185,0.30434782608695654
+Git Merge 충돌(Conflict) 발생 해결,High_Noise,4,2,0.30290974218144356,0.3783783783783784
+Git Merge 충돌(Conflict) 발생 해결,Ranking_Swapped,4,2,0.3033411689920165,0.3333333333333333
+Git Merge 충돌(Conflict) 발생 해결,Short_History,2,2,0.29301107932760706,0.24137931034482757
+Git Merge 충돌(Conflict) 발생 해결,Long_History,2,6,0.32724497396127883,0.35000000000000003
+Git Merge 충돌(Conflict) 발생 해결,Forced_JSON_Format,2,2,0.48248330907387255,0.5925925925925926
+Git Merge 충돌(Conflict) 발생 해결,Hallucination_Defense,3,2,0.07454463520448094,0.0
+Git Merge 충돌(Conflict) 발생 해결,Mixed_Stress_Test,6,6,0.3046303609702171,0.3684210526315789
+PostgreSQL 로컬 접속 타임아웃 오류,Baseline,3,2,0.20197704766771074,0.09090909090909091
+PostgreSQL 로컬 접속 타임아웃 오류,Context_Summarized,1,2,0.26208669530919027,0.10526315789473685
+PostgreSQL 로컬 접속 타임아웃 오류,Max_Chunks,6,2,0.265770796543566,0.14285714285714288
+PostgreSQL 로컬 접속 타임아웃 오류,High_Noise,4,2,0.2691759669843746,0.11538461538461536
+PostgreSQL 로컬 접속 타임아웃 오류,Ranking_Swapped,4,2,0.29166632072911586,0.22222222222222218
+PostgreSQL 로컬 접속 타임아웃 오류,Short_History,2,2,0.19473084710713004,0.08823529411764705
+PostgreSQL 로컬 접속 타임아웃 오류,Long_History,2,6,0.16297491996332344,0.06666666666666667
+PostgreSQL 로컬 접속 타임아웃 오류,Forced_JSON_Format,2,2,0.520919189322658,0.7234042553191489
+PostgreSQL 로컬 접속 타임아웃 오류,Hallucination_Defense,3,2,0.07758166078768144,0.0
+PostgreSQL 로컬 접속 타임아웃 오류,Mixed_Stress_Test,6,6,0.2879462938511498,0.24242424242424243
+IntelliJ 라이선스 서버 인증 실패,Baseline,3,2,0.22365821492403706,0.14285714285714288
+IntelliJ 라이선스 서버 인증 실패,Context_Summarized,1,2,0.34909428280543403,0.25
+IntelliJ 라이선스 서버 인증 실패,Max_Chunks,6,2,0.20239996749158318,0.125
+IntelliJ 라이선스 서버 인증 실패,High_Noise,4,2,0.24288394989174614,0.08510638297872342
+IntelliJ 라이선스 서버 인증 실패,Ranking_Swapped,4,2,0.3440188773455184,0.23529411764705882
+IntelliJ 라이선스 서버 인증 실패,Short_History,2,2,0.23127465730587207,0.14285714285714288
+IntelliJ 라이선스 서버 인증 실패,Long_History,2,6,0.317900760176352,0.26666666666666666
+IntelliJ 라이선스 서버 인증 실패,Forced_JSON_Format,2,2,0.4915139690153217,0.8148148148148148
+IntelliJ 라이선스 서버 인증 실패,Hallucination_Defense,3,2,0.17148909947600705,0.0
+IntelliJ 라이선스 서버 인증 실패,Mixed_Stress_Test,6,6,0.15786796441281353,0.25
+Office 365 아웃룩 프로필 손상,Baseline,3,2,0.13726703027848353,0.10526315789473682
+Office 365 아웃룩 프로필 손상,Context_Summarized,1,2,0.2014512058833528,0.16666666666666666
+Office 365 아웃룩 프로필 손상,Max_Chunks,6,2,0.32309636199411707,0.16666666666666666
+Office 365 아웃룩 프로필 손상,High_Noise,4,2,0.25979026137980504,0.1
+Office 365 아웃룩 프로필 손상,Ranking_Swapped,4,2,0.24818429253367263,0.10526315789473682
+Office 365 아웃룩 프로필 손상,Short_History,2,2,0.146176180172066,0.10526315789473682
+Office 365 아웃룩 프로필 손상,Long_History,2,6,0.1296044392097632,0.10526315789473682
+Office 365 아웃룩 프로필 손상,Forced_JSON_Format,2,2,0.45012033758456965,0.782608695652174
+Office 365 아웃룩 프로필 손상,Hallucination_Defense,3,2,0.07949815377631246,0.0
+Office 365 아웃룩 프로필 손상,Mixed_Stress_Test,6,6,0.13258859634852196,0.08695652173913043
+Adobe CC 폰트 동기화 무한 대기,Baseline,3,2,0.24967447468162965,0.20689655172413793
+Adobe CC 폰트 동기화 무한 대기,Context_Summarized,1,2,0.2577897533215924,0.20338983050847456
+Adobe CC 폰트 동기화 무한 대기,Max_Chunks,6,2,0.2278749751082482,0.19999999999999998
+Adobe CC 폰트 동기화 무한 대기,High_Noise,4,2,0.23940530565230334,0.20408163265306123
+Adobe CC 폰트 동기화 무한 대기,Ranking_Swapped,4,2,0.23976537896025377,0.25
+Adobe CC 폰트 동기화 무한 대기,Short_History,2,2,0.3063548004597188,0.2608695652173913
+Adobe CC 폰트 동기화 무한 대기,Long_History,2,6,0.17684121413649592,0.3125
+Adobe CC 폰트 동기화 무한 대기,Forced_JSON_Format,2,2,0.48958528998060946,0.56
+Adobe CC 폰트 동기화 무한 대기,Hallucination_Defense,3,2,0.07987501531640775,0.0
+Adobe CC 폰트 동기화 무한 대기,Mixed_Stress_Test,6,6,0.2489435591606942,0.17543859649122806
+맥북 kernel_task CPU 100% 점유율,Baseline,3,2,0.21356033175044253,0.5
+맥북 kernel_task CPU 100% 점유율,Context_Summarized,1,2,0.224134327220178,0.4516129032258065
+맥북 kernel_task CPU 100% 점유율,Max_Chunks,6,2,0.0526611233873298,0.0
+맥북 kernel_task CPU 100% 점유율,High_Noise,4,2,0.2429148953381867,0.5714285714285715
+맥북 kernel_task CPU 100% 점유율,Ranking_Swapped,4,2,0.24784769436714638,0.5185185185185185
+맥북 kernel_task CPU 100% 점유율,Short_History,2,2,0.1876562277916843,0.5333333333333333
+맥북 kernel_task CPU 100% 점유율,Long_History,2,6,0.33702478735339353,0.39999999999999997
+맥북 kernel_task CPU 100% 점유율,Forced_JSON_Format,2,2,0.40154541979790376,0.6666666666666666
+맥북 kernel_task CPU 100% 점유율,Hallucination_Defense,3,2,0.05529459853911571,0.0
+맥북 kernel_task CPU 100% 점유율,Mixed_Stress_Test,6,6,0.2184988924466241,0.2727272727272727
